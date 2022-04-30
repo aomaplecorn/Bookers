@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-# -------------------------------------new/create(投稿一覧＆新規投稿)
+# -------------------------------------以下、new/create(投稿一覧＆新規投稿)
   def index
     @books = Book.all
     @book = Book.new
@@ -15,11 +15,11 @@ class BooksController < ApplicationController
       render :index
     end
   end
-# -------------------------------------show(詳細画面)
+# -------------------------------------以下、show(詳細画面)
   def show
     @book = Book.find(params[:id])
   end
-# -------------------------------------edit/update(編集画面＆機能)
+# -------------------------------------以下、edit/update(編集画面＆更新機能)
   def edit
     @book = Book.find(params[:id])
   end
@@ -30,14 +30,14 @@ class BooksController < ApplicationController
     flash[:notice] = "Book was successfully updated."
     redirect_to book_path(book.id)
   end
-# -------------------------------------destroy(削除機能)
+# -------------------------------------以下、destroy(削除機能)
   def destroy
     book = Book.find(params[:id])
     book.destroy
     flash[:notice] = "Book was successfully destroyed."
     redirect_to '/books'
   end
-# -------------------------------------private
+# -------------------------------------以下、private
   private
   def book_params
     params.require(:book).permit(:title, :body)
