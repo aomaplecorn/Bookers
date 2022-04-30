@@ -14,3 +14,76 @@
  *= require_self
  */
 
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+a {
+  color: #000;
+}
+
+/*input[type=title]:required,*/
+/*input[type=title]:invalid,*/
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+/*input[type=field]:required,*/
+/*input[type=field]:invalid,*/
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+/*input[type=field]:required*/
+/*input[type=field]:invalid*/
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#notice {
+  color: green;
+}
+
+label {
+  display: block
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.field ,.action {
+  margin-bottom: 10px;
+}
+

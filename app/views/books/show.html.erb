@@ -1,22 +1,20 @@
 <!--------------------------以下、フラッシュメッセージ（新規投稿＆編集完了）-->
 <% if flash[:notice] %>
     <p id="notice">
-        <%= flash[:notice] %>
+      <%= flash[:notice] %>
     </p>
 <% end %>
 <!--------------------------以下、詳細画面（show）＆リンク（編集｜一覧）-->
 <p>
-    <strong>Title:</strong>
-    <%= @book.title %>
+  <strong>Title:</strong>
+  <%= @book.title %>
 </p>
 
 <p>
-    <strong>body:</strong>
-    <%= @book.body %>
+  <strong>body:</strong>
+  <%= @book.body %>
 </p>
 
-<p>
 <%= link_to 'Edit',edit_book_path(@book.id) %>
 ｜
 <%= link_to 'Back',books_path %>
-</p>
