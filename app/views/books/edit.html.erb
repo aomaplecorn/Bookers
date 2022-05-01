@@ -1,8 +1,21 @@
 <!--------------------------以下、編集画面＆更新機能(edit/update)-->
 <h1>Editing Book</h1>
 
-<%= form_with model: @book, url:book_path(@book.id), method: :patch do |f| %>
 
+<div id="error_explanation">
+  <% if @book.errors.any? %>
+    <h2>
+      <%= @book.errors.count %> errors prohibited this book from being saved:
+    </h2>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
+<%= form_with model: @book, url:book_path(@book.id), method: :patch do |f| %>
 
 <div class="field">
   <label>Title</label>
@@ -17,6 +30,8 @@
 </div>
 
 <% end %>
+
+
 
 <%= link_to 'Show',book_path(@book.id) %>
 ｜

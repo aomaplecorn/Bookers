@@ -1,4 +1,4 @@
-<!--------------------------以下、フラッシュメッセージ（エラー）-->
+<!--------------------------以下、フラッシュメッセージ（削除完了）-->
 <% if flash[:notice] %>
     <p id="notice">
       <%= flash[:notice] %>
@@ -31,8 +31,6 @@
 <!--------------------------以下、投稿機能（create）＆バリデーションチェック（エラー対象：無記入＆ホワイトスペース）-->
 <h2>New Books</h2>
 
-<%= form_with model: @book, url: '/books', method: :post do |f| %>
-
 <div id="error_explanation">
   <% if @book.errors.any? %>
     <h2>
@@ -46,14 +44,19 @@
   <% end %>
 </div>
 
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
 
-<div class="field"><label>Title</label>
-<%= f.text_field :title %></div>
-
-<div class="field"><label>Body</label>
-<%= f.text_area :body %></div>
-
-<div class="action"><%= f.submit 'Create Book'%></div>
+<div class="field">
+  <label>Title</label>
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <label>Body</label>
+  <%= f.text_area :body %>
+</div>
+<div class="action">
+  <%= f.submit 'Create Book'%>
+</div>
 
 
 <% end %>
