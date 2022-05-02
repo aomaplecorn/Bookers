@@ -3,8 +3,8 @@
 
 <%= form_with model: @book, url:book_path(@book.id), method: :patch do |f| %>
 
-<div id="error_explanation">
-  <% if @book.errors.any? %>
+<% if @book.errors.any? %>
+  <div id="error_explanation">
     <h2>
       <%= @book.errors.count %> errors prohibited this book from being saved:
     </h2>
@@ -13,8 +13,8 @@
         <li><%= message %></li>
       <% end %>
     </ul>
-  <% end %>
-</div>
+  </div>
+<% end %>
 
 <div class="field">
   <% if @book.errors.any?(:title) %>

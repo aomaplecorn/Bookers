@@ -31,7 +31,6 @@
 <!--------------------------以下、投稿機能（create）＆バリデーションチェック（エラー対象：無記入＆ホワイトスペース）-->
 <h2>New Books</h2>
 
-
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
 
 <% if @book.errors.any? %>
